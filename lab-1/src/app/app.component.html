@@ -1,0 +1,33 @@
+<div>
+  <mat-toolbar color="primary">
+    <span>Angular Lab</span>
+  </mat-toolbar>
+
+  <div>
+    <mat-chip-listbox aria-label="Fish selection">
+      <mat-chip-option>One fish</mat-chip-option>
+      <mat-chip-option>Two fish</mat-chip-option>
+      <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+      <mat-chip-option color="warn">Warn fish</mat-chip-option>
+    </mat-chip-listbox>
+    <h1>{{ pageTitle }}</h1>
+    <div>
+      <p>You entered: {{ userInput }}</p>
+    </div>
+
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>2-Way Binding</mat-label>
+        <input
+          matInput
+          placeholder=""
+          value=""
+          type="text"
+          id="inputText"
+          [ngModelOptions]="{ standalone: true }"
+          [(ngModel)]="userInput"
+        />
+      </mat-form-field>
+    </form>
+  </div>
+</div>
