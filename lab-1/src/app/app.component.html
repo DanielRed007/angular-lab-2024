@@ -1,33 +1,23 @@
 <div>
-  <mat-toolbar color="primary">
+  <mat-toolbar color="primary" class="">
     <span>Angular Lab</span>
   </mat-toolbar>
 
-  <div>
-    <mat-chip-listbox aria-label="Fish selection">
-      <mat-chip-option>One fish</mat-chip-option>
-      <mat-chip-option>Two fish</mat-chip-option>
-      <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
-      <mat-chip-option color="warn">Warn fish</mat-chip-option>
-    </mat-chip-listbox>
-    <h1>{{ pageTitle }}</h1>
-    <div>
-      <p>You entered: {{ userInput }}</p>
+  <div class="app-main-container">
+    <div class="chips-box">
+      <mat-chip-listbox aria-label="Fish selection">
+        <mat-chip-option>One fish</mat-chip-option>
+        <mat-chip-option>Two fish</mat-chip-option>
+        <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+        <mat-chip-option color="warn">Warn fish</mat-chip-option>
+      </mat-chip-listbox>
     </div>
 
-    <form class="example-form">
-      <mat-form-field class="example-full-width">
-        <mat-label>2-Way Binding</mat-label>
-        <input
-          matInput
-          placeholder=""
-          value=""
-          type="text"
-          id="inputText"
-          [ngModelOptions]="{ standalone: true }"
-          [(ngModel)]="userInput"
-        />
-      </mat-form-field>
-    </form>
+    <div class="two-way-binding-box">
+      <app-two-way-binding-card
+        cardTitle="Angular Labs - Two Way Binding"
+        tooltipMessage="Two-way binding gives components in your application a way to share data. Use two-way binding to listen for events and update values simultaneously between parent and child components."
+      ></app-two-way-binding-card>
+    </div>
   </div>
 </div>
