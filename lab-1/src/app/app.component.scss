@@ -1,0 +1,17 @@
+.app-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .chips-box {
+    padding-top: 1rem;
+  }
+
+  .two-way-binding-box {
+    padding-top: 1rem;
+  }
+}
+
+.mat-card {
+  background-color: #727272;
+}
