@@ -1,0 +1,9 @@
+<div class="chip-list" aria-label="chip-list">
+  <mat-chip-option
+    *ngFor="let chip of chipList"
+    color="{{ chip.color }}"
+    selected="{{ chip.selected }}"
+  >
+    {{ chip.label }}
+  </mat-chip-option>
+</div>
