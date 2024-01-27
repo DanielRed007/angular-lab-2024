@@ -7,9 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
 import { TwoWayBindingCardComponent } from './components/two-way-binding-card/two-way-binding-card.component';
+import { ChipListComponent } from './components/chip-list/chip-list.component';
 
 @NgModule({
-  declarations: [AppComponent, TwoWayBindingCardComponent],
+  declarations: [AppComponent, TwoWayBindingCardComponent, ChipListComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
