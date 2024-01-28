@@ -8,6 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   exports: [
@@ -19,6 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatTooltipModule,
     MatButtonModule,
     MatIconModule,
+    MatExpansionModule,
   ],
 })
 export class MaterialModule {}
