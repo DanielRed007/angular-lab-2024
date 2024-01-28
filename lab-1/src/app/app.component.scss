@@ -10,8 +10,33 @@
   .two-way-binding-box {
     padding-top: 1rem;
   }
+
+  .accordion-box {
+    padding-top: 1rem;
+  }
 }
 
 .mat-card {
   background-color: #727272;
+}
+
+// Desktop Responsive
+@media screen and (min-width: 1025px) {
+  .accordion-box {
+    width: 30%;
+  }
+}
+
+// Tablet Responsive
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .accordion-box {
+    width: 80%;
+  }
+}
+
+// Mobile Responsive
+@media screen and (max-width: 767px) {
+  .accordion-box {
+    width: 100%;
+  }
 }

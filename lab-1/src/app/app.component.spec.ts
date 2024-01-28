@@ -8,9 +8,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterTestingModule } from '@angular/router/testing';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { AppComponent } from './app.component';
 import { TwoWayBindingCardComponent } from './components/two-way-binding-card/two-way-binding-card.component';
 import { ChipListComponent } from './components/chip-list/chip-list.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
 
 describe('AppComponent', () => {
   beforeEach(() =>
@@ -25,11 +27,13 @@ describe('AppComponent', () => {
         MatFormFieldModule,
         MatInputModule,
         MatChipsModule,
+        MatExpansionModule,
       ],
       declarations: [
         AppComponent,
         TwoWayBindingCardComponent,
         ChipListComponent,
+        AccordionComponent,
       ],
     })
   );
