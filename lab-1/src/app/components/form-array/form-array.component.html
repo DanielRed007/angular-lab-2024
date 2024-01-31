@@ -4,30 +4,29 @@
     <mat-card-title>Shiba Inu</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <form [formGroup]="skillsForm" (ngSubmit)="onSubmit()">
-      <p>
-        <label for="name">Name </label>
-        <input type="text" id="name" name="name" formControlName="name" />
-      </p>
-
-      Skills:
-      <div formArrayName="skills">
-        <div *ngFor="let skill of skills.controls; let i = index">
-          <div [formGroupName]="i">
-            {{ i }}
-            skill name :
-            <input type="text" formControlName="skill" />
-            exp:
-            <input type="text" formControlName="exp" />
-
-            <button (click)="removeSkill(i)">Remove</button>
-          </div>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <!-- Add items dynamically-->
+      <div class="group-gap" formArrayName="addDynamicElement">
+        <h5 class="mb-3">Add Products</h5>
+        <div class="mb-3">
+          <button
+            type="button"
+            class="btn btn-sm btn-success mb-3 btn-block"
+            (click)="addItems()"
+          >
+            Add Items
+          </button>
+          <ul class="subjectList">
+            <li *ngFor="let item of addDynamicElement.controls; let i = index">
+              <input type="text" class="form-control" [formControlName]="i" />
+            </li>
+          </ul>
         </div>
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-danger btn-lg btn-block">
+          Submit Form
+        </button>
       </div>
-
-      <p>
-        <button type="submit">Submit</button>
-      </p>
     </form>
 
     <mat-divider></mat-divider>
